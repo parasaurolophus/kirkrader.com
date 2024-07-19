@@ -7,17 +7,17 @@ title = "Kirk Rader"
 
 [preprocessor]
 
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
-
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
 [output]
 
 [output.html]
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
 mathjax-support = true
 preferred-dark-theme = "coal"
 prefers-color-scheme = "dark"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
