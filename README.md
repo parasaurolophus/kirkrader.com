@@ -21,3 +21,11 @@ mdbook clean ; mdbook serve --open
 ```
 
 ...then unzip `./book.zip` in the web server's root directory
+
+## Notes
+
+* `./book.toml` is already configured for `mdbook-mermaid`, but for new
+  projects you must follow the instructions at
+  <https://lib.rs/crates/mdbook-mermaid> to run `mdbook-mermaid install`
+
+* Use `./update_mermaid` to upgrade to the latest version of mermaid
