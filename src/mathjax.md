@@ -144,7 +144,7 @@ Rationale for division rules in [IEEE
    \\[
         \frac x {\pm 0} =
             \begin{cases}
-                         \mathtt{NaN} & \text{where } x = \pm 0 \\\\
+                         \mathtt{NaN} & \text{where } x \in \\{ \pm0, \\ \mathtt{NaN} \\} \\\\
                 \pm \mathtt{INFINITY} & \text{otherwise}
             \end{cases}
    \\]

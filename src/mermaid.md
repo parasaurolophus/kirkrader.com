@@ -2,7 +2,9 @@
 
 <!-- toc -->
 
-## Generic Graph
+See <https://mermaid.js.org/>
+
+## Generic Graph / Flow Chart
 
 ```mermaid
 graph LR
@@ -61,4 +63,26 @@ sequenceDiagram
         server ->> browser: entity
     end
     deactivate browser
+```
+
+## State Diagram
+
+```mermaid
+stateDiagram
+
+    [*] --> daemon: start
+    
+    state daemon {
+        [*] --> watchdog
+        watchdog --> watchdog: keepalive
+        watchdog --> panic: timeout
+        panic --> [*]
+        --
+        [*] --> keepalive
+        keepalive --> process
+        process --> keepalive
+        process --> [*]: error
+    }
+
+    daemon --> [*]: panic
 ```
