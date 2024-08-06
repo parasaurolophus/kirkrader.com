@@ -1,2 +1,6 @@
-book
-book.zip
+node_modules
+.vitepress/cache
+.vitepress/dist
+.~*
+*~
+dist.zip

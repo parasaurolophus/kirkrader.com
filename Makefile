@@ -1,21 +1,25 @@
-all : cleanall build zip
+all:
+	$(MAKE) cleanall
+	$(MAKE) build
+	$(MAKE) zip
 
-zip : cleanzip
-	cd ./book ;	find . -name \* | zip ../book.zip -@
-
-build :
-	mdbook build
-
-clean :
-	mdbook clean
+clean:
+	if [ -d .vitepress/dist ]; then rm -rf .vitepress/dist; fi
+	if [ -d .vitepress/cache ]; then rm -rf .vitepress/cache; fi
 
 cleanzip:
-	if [ -f book.zip ]; then rm book.zip; fi
+	if [ -f dist.zip ]; then rm dist.zip; fi
 
-cleanall: cleanzip clean
+cleanall: clean cleanzip
 
-test :
-	mdbook serve --open
+build:
+	npm run docs:build
 
-mermaid :
-	curl https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js > mermaid.min.js
+dev:
+	npm run docs:dev
+
+preview:
+	npm run docs:preview
+
+zip: cleanzip
+	cd ./.vitepress/dist ;	find . -name \* | zip ../../dist.zip -@
