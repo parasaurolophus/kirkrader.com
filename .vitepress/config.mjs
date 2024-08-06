@@ -26,19 +26,19 @@ export default withMermaid({
     // socialLinks: [
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     // ]
-
-    // optionally, you can pass MermaidConfig
-    // mermaid: {
-    //    refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
-    // },
-
-    // optionally set additional config for plugin itself with MermaidPluginConfig
-    // mermaidPlugin: {
-    //   class: "mermaid my-class", // set additional css classes for parent container 
-    // },
   },
 
   markdown: {
     math: true,
   },
+
+  // optionally, you can pass MermaidConfig
+  // mermaid: {
+  //    refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+  // },
+
+  // optionally set additional config for plugin itself with MermaidPluginConfig
+  // mermaidPlugin: {
+  //   class: "mermaid my-class", // set additional css classes for parent container 
+  // },
 })
